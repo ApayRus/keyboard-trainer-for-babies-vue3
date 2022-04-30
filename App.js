@@ -17,6 +17,8 @@ const template =
         :activeKey="activeKey" 
         :setActiveKey="setActiveKey" 
         :playActiveKey="playActiveKey" 
+        :shiftOn="shiftOn"
+        :toggleShiftOn="toggleShiftOn"
       /> 
   </div>`
 
@@ -78,10 +80,13 @@ export default {
 					}
 				})
 		},
-		setActiveKey(code, shiftKey = false) {
+		setActiveKey(code, shiftKey) {
 			this.activeKey = calculateKey(this.keyboardData, code, shiftKey)
 			clearTimeout(this.timeout)
 			this.timeout = setTimeout(() => (this.activeKey = null), 1000)
+		},
+		toggleShiftOn() {
+			this.shiftOn = !this.shiftOn
 		}
 	},
 	components: {

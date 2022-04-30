@@ -83,6 +83,10 @@ pre {
 	cursor: pointer;
 }
 
+.shiftKeyOn {
+	background-color: red;
+}
+
 .key.activeKey {
 	position: absolute;
 	top: -50%;

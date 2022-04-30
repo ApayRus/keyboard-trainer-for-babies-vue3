@@ -1,5 +1,5 @@
 const template = /*html*/ `
-<div @click="keyPress(keyContent)" :class="['key', keyContent.code]">
+<div @click="keyClick(keyContent)" :class="['key', keyContent.code, shiftKeyOnStyle]">
     <div v-if="isActiveKey" :class="['key', 'activeKey', keyContent.code]">
       <div>{{activeKeyValue}}</div>
     </div>
@@ -15,14 +15,17 @@ export default {
 		currentLang: String,
 		activeKey: Object,
 		setActiveKey: Function,
-		playActiveKey: Function
+		playActiveKey: Function,
+		shiftOn: Boolean,
+		toggleShiftOn: Function
 	},
 	methods: {
-		keyPress(keyContent) {
-			console.log('keyContent')
-			console.log(keyContent)
-			this.setActiveKey(keyContent.code)
+		keyClick(keyContent) {
+			this.setActiveKey(keyContent.code, this.shiftOn)
 			this.playActiveKey()
+			if (keyContent.code.includes('Shift')) {
+				this.toggleShiftOn()
+			}
 		}
 	},
 	computed: {
@@ -38,6 +41,10 @@ export default {
 		shifted() {
 			const { shifted } = this.keyContent
 			return shifted
+		},
+		shiftKeyOnStyle() {
+			const { code } = this.keyContent
+			return code.includes('Shift') && this.shiftOn ? 'shiftKeyOn' : ''
 		},
 		activeKeyValue() {
 			const { keyValue, label, main, code } = this.activeKey
