@@ -149,3 +149,13 @@ pre {
 .ShiftLeft {
 	flex: 2;
 }
+
+@font-face {
+	font-family: Scheherazade;
+	src: url(fonts/ScheherazadeNew-Regular.ttf);
+}
+
+.ar {
+	font-family: Scheherazade;
+	/* font-size: medium; */
+}

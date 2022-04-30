@@ -1,6 +1,6 @@
 const template = /*html*/ `
-<div @click="keyClick(keyContent)" :class="['key', keyContent.code, shiftKeyOnStyle]">
-    <div v-if="isActiveKey" :class="['key', 'activeKey', keyContent.code]">
+<div @click="keyClick(keyContent)" :class="['key', keyContent.code, currentLang, shiftKeyOnStyle]">
+    <div v-if="isActiveKey" :class="['key', 'activeKey', keyContent.code, currentLang]">
       <div>{{activeKeyValue}}</div>
     </div>
     <div>{{main}}</div>
