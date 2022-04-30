@@ -27,7 +27,7 @@ export default {
 	data() {
 		return {
 			currentLang: 'en',
-			langs: ['en', 'ar', 'ru'],
+			langs: ['en', 'ru', 'ar'],
 			keyboardData: [],
 			activeKey: null,
 			shiftOn: false

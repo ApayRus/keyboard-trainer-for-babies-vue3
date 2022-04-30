@@ -150,6 +150,7 @@ pre {
 	flex: 2;
 }
 
+/* 
 @font-face {
 	font-family: Scheherazade;
 	src: url(fonts/ScheherazadeNew-Regular.ttf);
@@ -157,5 +158,6 @@ pre {
 
 .ar {
 	font-family: Scheherazade;
-	/* font-size: medium; */
+	font-size: medium;
 }
+ */
