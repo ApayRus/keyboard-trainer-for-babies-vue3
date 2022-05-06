@@ -12,6 +12,10 @@ It can be useful for adults as well to learn a new language
 keyboard or to create your own keyboard
 simulator based on this open source code.
 
+## Usage example gif
+
+![showing usage example](https://apayrus.github.io/keyboard-trainer-for-babies-vue3/images/usage.gif)
+
 ## Help/contribution
 
 Please, help me to record every key name sounds with a good voice and pure pronunciation.
@@ -37,10 +41,6 @@ Or serve entire folder and browse its root address (e.g. 127.0.0.1:3000 or local
 ## Live Demo
 
 [https://apayrus.github.io/keyboard-trainer-for-babies-vue3/](https://apayrus.github.io/keyboard-trainer-for-babies-vue3/)
-
-## Usage example gif
-
-![showing usage example](https://apayrus.github.io/keyboard-trainer-for-babies-vue3/images/usage.gif)
 
 ## English
 
